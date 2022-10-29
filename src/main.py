@@ -69,7 +69,9 @@ class MainW(QMainWindow, design.Ui_MainWindow):
             def chapter_to_str(chapter, links, herz):
                 try:
                     soup = bs4.BeautifulSoup(chapter, 'html.parser')
-                    main_links = [bs4.BeautifulSoup(f'{link}', 'html.parser') for link in links]
+                    main_links = [bs4.BeautifulSoup(f'{link}', 'html.parser') if link else None for link in links]
+                    main_links2 = list(filter(lambda x: x is not None, main_links))
+
                     attrs, span, content, f_cont = {}, False, [], []
                     for tg in soup.body.contents:
                         content.append(str(tg))
@@ -95,12 +97,12 @@ class MainW(QMainWindow, design.Ui_MainWindow):
                             if last != 0:
                                 counter = 0
                                 for i in range(a + 1, len(content) + 1, last):
-                                    if len(main_links) - 1 >= counter:
-                                        content.insert(i, str(main_links[counter]))
+                                    if len(main_links2) - 1 >= counter:
+                                        content.insert(i, str(main_links2[counter]))
                                         counter += 1
                                     else:
                                         counter = 0
-                                        content.insert(i, str(main_links[0]))
+                                        content.insert(i, str(main_links2[0]))
                             else:
                                 content.insert(a + 1, str(main_links[0]))
                             truth = bs4.BeautifulSoup(str('\n'.join(content)), 'html.parser')
