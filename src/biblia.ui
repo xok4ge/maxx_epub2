@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>415</width>
-    <height>434</height>
+    <width>271</width>
+    <height>312</height>
    </rect>
   </property>
   <property name="sizePolicy">
@@ -18,14 +18,14 @@
   </property>
   <property name="minimumSize">
    <size>
-    <width>415</width>
-    <height>434</height>
+    <width>0</width>
+    <height>0</height>
    </size>
   </property>
   <property name="maximumSize">
    <size>
-    <width>415</width>
-    <height>434</height>
+    <width>100000</width>
+    <height>100000</height>
    </size>
   </property>
   <property name="windowTitle">
@@ -42,166 +42,97 @@
      <height>0</height>
     </size>
    </property>
-   <widget class="QPushButton" name="start">
-    <property name="geometry">
-     <rect>
-      <x>310</x>
-      <y>350</y>
-      <width>91</width>
-      <height>31</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>Начать</string>
-    </property>
-   </widget>
-   <widget class="QLineEdit" name="directory_line">
-    <property name="enabled">
-     <bool>false</bool>
-    </property>
-    <property name="geometry">
-     <rect>
-      <x>20</x>
-      <y>60</y>
-      <width>271</width>
-      <height>20</height>
-     </rect>
-    </property>
-    <property name="dragEnabled">
-     <bool>false</bool>
-    </property>
-    <property name="readOnly">
-     <bool>false</bool>
-    </property>
-   </widget>
-   <widget class="QSpinBox" name="herz_line">
-    <property name="geometry">
-     <rect>
-      <x>20</x>
-      <y>300</y>
-      <width>161</width>
-      <height>22</height>
-     </rect>
-    </property>
-    <property name="minimum">
-     <number>1</number>
-    </property>
-   </widget>
-   <widget class="QLabel" name="label">
-    <property name="geometry">
-     <rect>
-      <x>20</x>
-      <y>280</y>
-      <width>181</width>
-      <height>16</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>Количество ссылок на странице</string>
-    </property>
-   </widget>
-   <widget class="QLabel" name="label_2">
-    <property name="geometry">
-     <rect>
-      <x>20</x>
-      <y>110</y>
-      <width>271</width>
-      <height>16</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>Ссылка в html формате</string>
-    </property>
-   </widget>
-   <widget class="QLabel" name="label_3">
-    <property name="geometry">
-     <rect>
-      <x>20</x>
-      <y>40</y>
-      <width>271</width>
-      <height>16</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>Директория с книгами</string>
-    </property>
-   </widget>
-   <widget class="QPushButton" name="choose_file">
-    <property name="geometry">
-     <rect>
-      <x>310</x>
-      <y>60</y>
-      <width>91</width>
-      <height>23</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>Выбрать файл</string>
-    </property>
-   </widget>
-   <widget class="QLineEdit" name="link_1">
-    <property name="geometry">
-     <rect>
-      <x>20</x>
-      <y>130</y>
-      <width>271</width>
-      <height>20</height>
-     </rect>
-    </property>
-   </widget>
-   <widget class="QLineEdit" name="link_2">
-    <property name="geometry">
-     <rect>
-      <x>20</x>
-      <y>180</y>
-      <width>271</width>
-      <height>20</height>
-     </rect>
-    </property>
-   </widget>
-   <widget class="QLabel" name="label_4">
-    <property name="geometry">
-     <rect>
-      <x>20</x>
-      <y>160</y>
-      <width>271</width>
-      <height>16</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>Ссылка в html формате</string>
-    </property>
-   </widget>
-   <widget class="QLineEdit" name="link_3">
-    <property name="geometry">
-     <rect>
-      <x>20</x>
-      <y>230</y>
-      <width>271</width>
-      <height>20</height>
-     </rect>
-    </property>
-   </widget>
-   <widget class="QLabel" name="label_5">
-    <property name="geometry">
-     <rect>
-      <x>20</x>
-      <y>210</y>
-      <width>271</width>
-      <height>16</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>Ссылка в html формате</string>
-    </property>
-   </widget>
+   <layout class="QGridLayout" name="gridLayout_3">
+    <item row="0" column="0">
+     <layout class="QGridLayout" name="gridLayout_2">
+      <item row="0" column="0">
+       <widget class="QLabel" name="label_3">
+        <property name="text">
+         <string>Директория с книгами</string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="0">
+       <widget class="QLineEdit" name="directory_line">
+        <property name="enabled">
+         <bool>false</bool>
+        </property>
+        <property name="dragEnabled">
+         <bool>false</bool>
+        </property>
+        <property name="readOnly">
+         <bool>false</bool>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="1">
+       <widget class="QPushButton" name="choose_file">
+        <property name="text">
+         <string>Выбрать файл</string>
+        </property>
+       </widget>
+      </item>
+      <item row="2" column="0">
+       <widget class="QLabel" name="label_2">
+        <property name="text">
+         <string>Ссылка в html формате</string>
+        </property>
+       </widget>
+      </item>
+      <item row="3" column="0" colspan="2">
+       <widget class="QLineEdit" name="link_1"/>
+      </item>
+      <item row="4" column="0">
+       <widget class="QLabel" name="label_4">
+        <property name="text">
+         <string>Ссылка в html формате</string>
+        </property>
+       </widget>
+      </item>
+      <item row="5" column="0" colspan="2">
+       <widget class="QLineEdit" name="link_2"/>
+      </item>
+      <item row="10" column="1">
+       <widget class="QPushButton" name="start">
+        <property name="text">
+         <string>Начать</string>
+        </property>
+       </widget>
+      </item>
+      <item row="6" column="0">
+       <widget class="QLabel" name="label_5">
+        <property name="text">
+         <string>Ссылка в html формате</string>
+        </property>
+       </widget>
+      </item>
+      <item row="7" column="0" colspan="2">
+       <widget class="QLineEdit" name="link_3"/>
+      </item>
+      <item row="8" column="0">
+       <widget class="QLabel" name="label">
+        <property name="text">
+         <string>Количество ссылок на странице</string>
+        </property>
+       </widget>
+      </item>
+      <item row="9" column="0">
+       <widget class="QSpinBox" name="herz_line">
+        <property name="minimum">
+         <number>1</number>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+   </layout>
   </widget>
   <widget class="QMenuBar" name="menubar">
    <property name="geometry">
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>415</width>
+     <width>271</width>
      <height>21</height>
     </rect>
    </property>
